@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hydrofoil/shaperone-wc": "*",
+    "@hydrofoil/shaperone-wc-material": "*",
     "@rdf-esm/dataset": "^0.5",
     "@rdf-esm/formats-common": "^0.5",
     "@rdfjs/fetch-lite": "^3",
