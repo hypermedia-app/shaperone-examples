@@ -9,8 +9,8 @@
     "serve": "npx wcd-cli@latest serve O8SwE2klRV1wMB87Rkh2 --open"
   },
   "dependencies": {
-    "@hydrofoil/shaperone-wc": "*",
-    "@hydrofoil/shaperone-wc-material": "*",
+    "@hydrofoil/shaperone-wc": "0.6.4",
+    "@hydrofoil/shaperone-wc-material": "0.5.0",
     "@rdf-esm/dataset": "^0.5",
     "@rdf-esm/formats-common": "^0.5",
     "@rdfjs/fetch-lite": "^3",
