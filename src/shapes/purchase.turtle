@@ -1,0 +1,57 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ex: <http://example.com/> .
+@prefix lexvo: <http://lexvo.org/id/iso639-1/> .
+
+ex:PersonShape
+  a sh:Shape ;
+  sh:targetClass schema:Rating ;
+  rdfs:label "Rate you purchase" ;
+  sh:property ex:DeliveryTime ,
+              ex:ItemAccuracy ,
+              ex:Satisfaction ;
+.
+
+ex:Satisfaction
+  a sh:PropertyShape ;
+  sh:path ex:satisfaction ;
+  sh:name "Overall satisfaction" ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  dash:editor ex:StarRating ;
+  dash:icon "faSmile" ;
+  sh:order 30 ;
+.
+
+ex:ItemAccuracy
+  a sh:PropertyShape ;
+  sh:path ex:accuracy ;
+  sh:name "Item accuracy" ;
+  sh:description "How closely does the item match the advertised description?" ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  dash:editor ex:StarRating ;
+  dash:icon "faThumbsUp" ;
+  sh:order 10 ;
+.
+
+
+ex:DeliveryTime
+  a sh:PropertyShape ;
+  sh:path ex:deliveryTime ;
+  sh:name "Delivery time" ;
+  sh:description "Has the seller dispatched the item in a timely manner? Did it arrive on time?" ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  dash:editor ex:StarRating ;
+  dash:icon "faBoxOpen" ;
+  sh:order 20 ;
+.

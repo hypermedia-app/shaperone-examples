@@ -1,0 +1,17 @@
+prefix schema: <http://schema.org/>
+prefix sh: <http://www.w3.org/ns/shacl#>
+
+<>
+  a sh:NodeShape ;
+  sh:property
+    [
+      sh:name "Title" ;
+      sh:path schema:name ;
+      sh:minCount 1 ;
+    ], [
+      sh:name "Rating" ;
+      sh:path schema:aggregateRating ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ] ;
+.
