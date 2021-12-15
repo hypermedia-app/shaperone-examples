@@ -1,3 +1,4 @@
+// configuration goes here
 import { templates } from '@hydrofoil/shaperone-wc/templates.js'
 import { renderer, components } from '@hydrofoil/shaperone-wc/configure'
 import * as MaterialRenderStrategy from '@hydrofoil/shaperone-wc-material/renderer'
